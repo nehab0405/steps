@@ -123,6 +123,111 @@ new->pipeline->log rotation(5,5)
 pipeline script with svm->git->give url and credentials
 apply and save 
 ====================================================
+codes
+import java.util.Scanner;
+
+class SquareArea {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter side of square: ");
+        int side = sc.nextInt();
+
+        int area = side * side;
+        System.out.println("Area of square = " + area);
+    }
+}
+
+
+import java.util.Scanner;
+
+class SimpleInterest {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter Principal: ");
+        float p = sc.nextFloat();
+
+        System.out.print("Enter Time: ");
+        float t = sc.nextFloat();
+
+        System.out.print("Enter Rate: ");
+        float r = sc.nextFloat();
+
+        float si = (p * t * r) / 100;
+        System.out.println("Simple Interest = " + si);
+    }
+}
+
+
+import java.util.Scanner;
+
+class PrimeCheck {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int n = sc.nextInt();
+
+        int count = 0;
+
+        if (n > 1) {
+            for (int i = 1; i <= n; i++) {
+                if (n % i == 0)
+                    count++;
+            }
+        }
+
+        if (count == 2)
+            System.out.println(n + " is a Prime number");
+        else
+            System.out.println(n + " is NOT a Prime number");
+    }
+}
+
+
+import java.util.Scanner;
+
+class AlternatePrimes {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter limit: ");
+        int n = sc.nextInt();
+
+        int flag = 0;
+
+        for (int num = 2; num <= n; num++) {
+            int count = 0;
+
+            for (int i = 1; i <= num; i++) {
+                if (num % i == 0)
+                    count++;
+            }
+
+            if (count == 2) { // prime
+                if (flag % 2 == 0)
+                    System.out.print(num + " ");
+                flag++;
+            }
+        }
+    }
+}
+
+
+import java.util.Scanner;
+
+class StringLength {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a string: ");
+        String str = sc.nextLine();
+
+        int length = str.length();
+        System.out.println("Length of string = " + length);
+    }
+}
 
 
 
